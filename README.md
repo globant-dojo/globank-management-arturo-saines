@@ -11,7 +11,7 @@ Este proyecto es un REST API desarrollado en .Net 6, siguiendo la Arquitectura L
 
 Este API maneja transaccionabilidad a nivel de EF cuando se desea insertar Movimientos.
   
-En la carpeta principal, se encuentra el archivo json de Postman con nombre "Dojo .Net BP.postman_collection" para las pruebas necesarias del API.
+En la ruta principal, se encuentra el archivo json de Postman con nombre "Dojo .Net BP.postman_collection" para las pruebas necesarias del API.
 
 
 
