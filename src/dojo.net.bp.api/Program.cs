@@ -4,22 +4,37 @@ using dojo.net.bp.infrastructure.extentions;
 using dojo.net.bp.infrastructure.ioc;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
-
-
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using dojo.net.bp.domain.entities.Settings;
-using dojo.net.bp.application.interfaces.DbContexts;
 using Microsoft.EntityFrameworkCore;
 using dojo.net.bp.infrastructure.data.Context;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
-using dojo.net.bp.application.Formatters;
 using Fonlow.DateOnlyExtensions;
 
-var builder = WebApplication.CreateBuilder(args);
+//The following lines helps to the API to be installed and executed as a Windows Service
+//var builder = WebApplication.CreateBuilder(args);
+var webApplicationOptions = new WebApplicationOptions() { ContentRootPath = AppContext.BaseDirectory, Args = args, ApplicationName = System.Diagnostics.Process.GetCurrentProcess().ProcessName };
+var builder = WebApplication.CreateBuilder(webApplicationOptions);
+builder.Host.UseWindowsService(c => c.ServiceName = "dojo.net.bp.api");
+
+
+//Configure Kestrel so the windows service linked to this API can be executed in a different port
+//This uses the Kestrel configuration on the AppSettings file.
+//This also overrides the configuration set on the launchSettins.json file
+builder.WebHost.ConfigureKestrel((context, serverOptions) =>
+{
+    var kestrelSection = context.Configuration.GetSection("Kestrel");
+
+    serverOptions.Configure(kestrelSection)
+        .Endpoint("HTTP", listenOptions =>
+        {
+            // ...
+        });
+});
+
 
 // Add services to the container.
-
 builder.Services.AddControllers()
     .AddNewtonsoftJson(
                 options =>
@@ -28,7 +43,9 @@ builder.Services.AddControllers()
                     options.SerializerSettings.Converters.Add(new dojo.net.bp.application.Formatters.DateOnlyJsonConverter());
                     options.SerializerSettings.Converters.Add(new DateOnlyNullableJsonConverter());
                 }
-            ); ;
+            ); //the AddNewtonsoftJson is used for parsing the DateOnly type from a json request, by using the dojo.net.bp.application.Formatters.DateOnlyJsonConverter() class
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
@@ -57,7 +74,6 @@ builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSet
 builder.Services.AddDbContextFactory<BP_DBContext>(options => {
     options.UseSqlServer(builder.Configuration.GetConnectionString("BPDB"));
 });
-//builder.Services.AddTransient<ABP_DBContext>(provider => provider.GetService<BP_DBContext>());
 
 
 //Dependencias propias de Servicio
