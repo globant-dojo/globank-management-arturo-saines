@@ -1,0 +1,361 @@
+{
+	"info": {
+		"_postman_id": "d2a8b666-f14b-4f1d-b231-58af70eae2cc",
+		"name": "Dojo .Net BP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/api-transacciones/v1/clientes/0920162161",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api-transacciones/v1/clientes/0920162161",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api-transacciones",
+						"v1",
+						"clientes",
+						"0920162161"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api-transacciones/v1/clientes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Identificacion\": \"0920162177\",\r\n    \"NombresCompletos\": \"Prueba Cliente 6\",\r\n    \"Genero\": \"FEMENINO\",\r\n    \"FechaNacimiento\":\"14/12/1953\",\r\n    \"DireccionDomicilio\": \"Lejos de aqui, cerca de alla 6\",\r\n    \"Telefono\": \"0982382161\",\r\n    \"Contrasena\": \"loquevenga5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api-transacciones/v1/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api-transacciones",
+						"v1",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api-transacciones/v1/clientes",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"clienteId\": 15,\r\n        \"identificacion\": \"0930405060\",\r\n        \"nombresCompletos\": \"Prueba Cliente 6 (ACTUALIZADO)\",\r\n        \"genero\": \"MASCULINO\",\r\n        \"fechaNacimiento\": \"14/12/1969\",\r\n        \"direccionDomicilio\": \"Lejos de aqui, cerca de alla (actualizado)\",\r\n        \"telefono\": \"0982382161\",\r\n        \"contrasena\": \"claveactualizada1\",\r\n        \"Estado\": true\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api-transacciones/v1/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api-transacciones",
+						"v1",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api-transacciones/v1/cuentas/00012352542",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api-transacciones/v1/cuentas/00012352542",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api-transacciones",
+						"v1",
+						"cuentas",
+						"00012352542"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api-transacciones/v1/cuentas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Cedula\": \"0920162161\",\r\n    \"NumeroCuenta\": \"0005468484\",\r\n    \"TipoCuenta\": \"CORRIENTE\",\r\n    \"SaldoInicial\": 300,\r\n    \"SaldoDisponible\": 300\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api-transacciones/v1/cuentas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api-transacciones",
+						"v1",
+						"cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api-transacciones/v1/cuentas",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Cedula\": \"0920162161\",\r\n    \"NumeroCuenta\": \"0005468484\",\r\n    \"TipoCuenta\": \"CORRIENTE\",\r\n    \"SaldoInicial\": 250,\r\n    \"SaldoDisponible\": 125\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api-transacciones/v1/cuentas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api-transacciones",
+						"v1",
+						"cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api-transacciones/v1/cuentas",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NumeroCuenta\": \"0005468484\",\r\n    \"TipoCuenta\": \"CORRIENTE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api-transacciones/v1/cuentas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api-transacciones",
+						"v1",
+						"cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api-transacciones/v1/movimientos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NumeroCuenta\": \"0005468484\",\r\n    \"TipoCuenta\": \"CORRIENTE\",\r\n    \"FechaInicioBusqueda\": \"01/07/2022\",\r\n    \"FechaFinBusqueda\": \"31/07/2022\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api-transacciones/v1/movimientos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api-transacciones",
+						"v1",
+						"movimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api-transacciones/v1/movimientos/retiro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NumeroCuenta\": \"0005468484\",\r\n    \"TipoCuenta\": \"CORRIENTE\",\r\n    \"Valor\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api-transacciones/v1/movimientos/retiro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api-transacciones",
+						"v1",
+						"movimientos",
+						"retiro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api-transacciones/v1/movimientos/credito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NumeroCuenta\": \"0005468484\",\r\n    \"TipoCuenta\": \"CORRIENTE\",\r\n    \"Valor\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api-transacciones/v1/movimientos/credito",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api-transacciones",
+						"v1",
+						"movimientos",
+						"credito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api-transacciones/v1/movimientos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NumeroCuenta\": \"0005468484\",\r\n    \"TipoCuenta\": \"CORRIENTE\",\r\n    \"MovimientoId\": 23\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api-transacciones/v1/movimientos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api-transacciones",
+						"v1",
+						"movimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api-transacciones/v1/ConsultaEstadoCuenta",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NumeroCuenta\": \"0005468484\",\r\n    \"TipoCuenta\": \"CORRIENTE\",\r\n    \"FechaInicioBusqueda\": \"01/07/2022\",\r\n    \"FechaFinBusqueda\": \"31/07/2022\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api-transacciones/v1/ConsultaEstadoCuenta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api-transacciones",
+						"v1",
+						"ConsultaEstadoCuenta"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

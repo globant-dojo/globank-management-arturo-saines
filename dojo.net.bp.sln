@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dojo.net.bp.application", "src\dojo.net.bp.application\dojo.net.bp.application.csproj", "{AD78D691-05A3-44DA-865A-E322A17FF356}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dojo.net.bp.infrastructure", "src\dojo.net.bp.infrastructure\dojo.net.bp.infrastructure.csproj", "{755BAC8F-677E-4FE6-8780-0B0B3FF878A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dojo.net.bp.api", "src\dojo.net.bp.api\dojo.net.bp.api.csproj", "{6A90503A-6200-48B7-B291-23638492231D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{16E068B2-8CB7-4B9D-94B5-97E2871D7A4D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{901820BF-D1DC-4B69-A86E-061836AB9817}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dojo.net.bp.domain", "src\dojo.net.bp.domain\dojo.net.bp.domain.csproj", "{D21C742E-7F95-4306-800A-1383823A14BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD78D691-05A3-44DA-865A-E322A17FF356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD78D691-05A3-44DA-865A-E322A17FF356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD78D691-05A3-44DA-865A-E322A17FF356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD78D691-05A3-44DA-865A-E322A17FF356}.Release|Any CPU.Build.0 = Release|Any CPU
+		{755BAC8F-677E-4FE6-8780-0B0B3FF878A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{755BAC8F-677E-4FE6-8780-0B0B3FF878A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{755BAC8F-677E-4FE6-8780-0B0B3FF878A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{755BAC8F-677E-4FE6-8780-0B0B3FF878A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A90503A-6200-48B7-B291-23638492231D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A90503A-6200-48B7-B291-23638492231D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A90503A-6200-48B7-B291-23638492231D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A90503A-6200-48B7-B291-23638492231D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D21C742E-7F95-4306-800A-1383823A14BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D21C742E-7F95-4306-800A-1383823A14BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D21C742E-7F95-4306-800A-1383823A14BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D21C742E-7F95-4306-800A-1383823A14BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AD78D691-05A3-44DA-865A-E322A17FF356} = {16E068B2-8CB7-4B9D-94B5-97E2871D7A4D}
+		{755BAC8F-677E-4FE6-8780-0B0B3FF878A2} = {16E068B2-8CB7-4B9D-94B5-97E2871D7A4D}
+		{6A90503A-6200-48B7-B291-23638492231D} = {16E068B2-8CB7-4B9D-94B5-97E2871D7A4D}
+		{D21C742E-7F95-4306-800A-1383823A14BB} = {16E068B2-8CB7-4B9D-94B5-97E2871D7A4D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0DA207F0-7BE7-4F5D-A5AB-7C8D195B56FE}
+	EndGlobalSection
+EndGlobal
